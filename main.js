@@ -34,9 +34,9 @@ const rl = readln.createInterface({
 });
 
 rl.question("press a button and then hit enter: ", (answer => {
-    if(answer ==+ '1'){
+    if(answer === '1'){
         console.log("u pressed 1")
-    }else if(anwser ==+ '2'){
+    }else if(anwser === '2'){
         console.log("u pressed 2")
         
     }else if(anwser === '3'){
