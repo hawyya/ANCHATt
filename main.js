@@ -1,3 +1,5 @@
+
+
 let hello = `
 
  _______ _______ ______ _______ _______ _______ _______ 
@@ -20,6 +22,11 @@ let join = `
 
 `
 
+
+
+console.log(hello)
+console.log(join)
+
 const readln = require('readline')
 const rl = readln.createInterface({
     input: process.stdin,
@@ -27,24 +34,15 @@ const rl = readln.createInterface({
 });
 
 rl.question("press a button and then hit enter: ", (answer => {
-    if(answer == '1'){
+    if(answer ==+ '1'){
         console.log("u pressed 1")
-    }else if(anwser == '2'){
+    }else if(anwser ==+ '2'){
         console.log("u pressed 2")
         
-    }else if(anwser == '3'){
+    }else if(anwser === '3'){
         console.log("u pressed 3")
     }else{
         console.log("no such anwser")
     }
     rl.close()
 }),)
-
-rl.on("close", () => {
-    console.log("Goodbye!")
-})
-
-console.log(hello)
-console.log(join)
-
-
