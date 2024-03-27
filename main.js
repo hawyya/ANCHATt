@@ -20,6 +20,29 @@ let join = `
 
 `
 
+const readln = require('readline')
+const rl = readln.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("press a button and then hit enter: ", (anwser => {
+    if(answer == '1'){
+        console.log("u pressed 1")
+    }else if(anwse == '2'){
+        console.log("u pressed 2")
+        
+    }else if(anwse == '3'){
+        console.log("u pressed 3")
+    }else{
+        console.log("no such anwser")
+    }
+    rl.close()
+}),)
+
+rl.on("close", () => {
+    console.log("Goodbye!")
+})
 
 console.log(hello)
 console.log(join)
