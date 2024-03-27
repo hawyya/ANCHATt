@@ -26,13 +26,13 @@ const rl = readln.createInterface({
     output: process.stdout
 });
 
-rl.question("press a button and then hit enter: ", (anwser => {
+rl.question("press a button and then hit enter: ", (answer => {
     if(answer == '1'){
         console.log("u pressed 1")
-    }else if(anwse == '2'){
+    }else if(anwser == '2'){
         console.log("u pressed 2")
         
-    }else if(anwse == '3'){
+    }else if(answer == '3'){
         console.log("u pressed 3")
     }else{
         console.log("no such anwser")
@@ -46,3 +46,5 @@ rl.on("close", () => {
 
 console.log(hello)
 console.log(join)
+
+
