@@ -7,8 +7,6 @@ let hello = `
 |   _   |    |  |      |   |   |   _   |_     _|_     _|
 |       |       |   ---|       |       | |   |   |   |  
 |___|___|__|____|______|___|___|___|___| |___|   |___| 
-                                                     
-
 `
 
 let join = `
@@ -20,8 +18,14 @@ let join = `
 |                          |   
 |  press 3 to exit         |   
 |__________________________|
-
 `
+
+let enCode = `
+ _____________________
+|                     |
+|enter your room code |
+|_____________________|
+` 
 
 
 
@@ -34,23 +38,30 @@ const rl = readln.createInterface({
     output: process.stdout
 });
 
-rl.question("press a button and then hit enter: ", (answer => {
-    if(answer === '1'){
-        console.log("u pressed 1")
-    }else if(answer === '2'){
-        console.log("u pressed 2")
-        
-    }else if(answer === '3'){
-        console.log("u pressed 3")
-    }else{
-        console.log("no such anwser")
-    }
-    rl.close()
+
+
+function getRandomInt(min,max){
+    min = Math.ceil(min)
+    max = Math.floor(max)
+    return Math.floor(Math.random() * (max - min + 1)) + min; 
+}
+let tr = true
+    rl.question("1/2/3: ", (answer => {
+                if(answer === '1'){
+                    console.clear();
+                    code = (getRandomInt(100000,999999))
+                    console.log(enCode);
+                    console.log(code)
+                }else if(answer === '2'){
+                code = (getRandomInt(100000,999999))
+                console.log(code)
+                }else if(answer === '3'){
+                    
+                }else{
+                    console.log("no such anwser")
+                }
+                rl.close()
 }),)
-
-
-
-
 
 
 
