@@ -36,10 +36,10 @@ const rl = readln.createInterface({
 rl.question("press a button and then hit enter: ", (answer => {
     if(answer === '1'){
         console.log("u pressed 1")
-    }else if(anwser === '2'){
+    }else if(answer === '2'){
         console.log("u pressed 2")
         
-    }else if(anwser === '3'){
+    }else if(answer === '3'){
         console.log("u pressed 3")
     }else{
         console.log("no such anwser")
