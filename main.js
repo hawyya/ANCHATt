@@ -38,8 +38,6 @@ const rl = readln.createInterface({
     output: process.stdout
 });
 
-
-
 function getRandomInt(min,max){
     min = Math.ceil(min)
     max = Math.floor(max)
@@ -49,9 +47,7 @@ let tr = true
     rl.question("1/2/3: ", (answer => {
                 if(answer === '1'){
                     console.clear();
-                    code = (getRandomInt(100000,999999))
-                    console.log(enCode);
-                    console.log(code)
+                    const one = require('./one.js');
                 }else if(answer === '2'){
                 code = (getRandomInt(100000,999999))
                 console.log(code)
@@ -62,6 +58,7 @@ let tr = true
                 }
                 rl.close()
 }),)
+
 
 
 
