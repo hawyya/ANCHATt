@@ -2,4 +2,4 @@
 
 ## HOW TO USE?
 
-git clone https://github.com/hawyya/ANCHATt.git
+<clipeboard-copy> git clone https://github.com/hawyya/ANCHATT.git
