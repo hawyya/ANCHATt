@@ -1,4 +1,4 @@
-# ANCHATt
+# ANCHATT
 free fully anonymous messenger for terminal 
 
 
