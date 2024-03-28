@@ -1,5 +1,5 @@
 # ANCHATT
-free fully anonymous messenger for terminal 
 
+##HOW TO USE?
 
 git clone https://github.com/hawyya/ANCHATt.git
