@@ -76,6 +76,10 @@ rl.on('line', (input) => {
             console.log(num)
         rl.setPrompt(quest3 + ':')
         rl.prompt()}
+        else if(input.trim() === 'e'){
+            console.clear()
+            rl.close()
+        }
     })
   } else if(input.trim() === '3'){
     console.log("Thank you for using our application")
