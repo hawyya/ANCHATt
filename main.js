@@ -82,6 +82,7 @@ rl.on('line', (input) => {
             console.log(join)
         }
         else if(input.trim() === 'e'){
+            console.clear()
             console.log(hello)
             console.log(join)
         }
