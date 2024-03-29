@@ -66,7 +66,7 @@ rl.on('line', (input) => {
     const second = spawn('node', ['one,js']);
   } else if (input.trim() === '2') {
     let num = getRandomInt(100000, 999999)
-    console.log("this is your join code: ")
+    console.log("This is your disposable code: ")
     console.log(num)
   } else if(input.trim() === '3'){
     console.log("Thank you for using our application")
