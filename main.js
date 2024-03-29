@@ -46,28 +46,37 @@ function getRandomInt(min,max){
 let isRunning = true;
 
 const readline = require('readline');
+const internal = require('stream')
 
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
 
-let quest = "1/2/3"
+let quest1 = "1/2/3"
+let blank = ""
+let quest2 = "do you want to create room? y/n"
+let quest3 = "write 'e' to exit"
 
 
-rl.setPrompt(quest + ":");
+rl.setPrompt(quest1 + ":");
 rl.prompt();
 
-const { spawn } = require('child_process');
 
 rl.on('line', (input) => {
   if (input.trim() === '1') {
-    rl.close();
-    const second = spawn('node', ['one,js']);
+
   } else if (input.trim() === '2') {
-    let num = getRandomInt(100000, 999999)
-    console.log("This is your disposable code: ")
-    console.log(num)
+    rl.setPrompt(quest2 + ':')
+    rl.on('line', (input) =>{
+        if(input.trim() === 'y'){
+            console.clear()    
+            console.log("This is your disposable room code! Now you can share it to a friend")    
+            num = getRandomInt(100000, 999999)
+            console.log(num)
+        rl.setPrompt(quest3 + ':')
+        rl.prompt()}
+    })
   } else if(input.trim() === '3'){
     console.log("Thank you for using our application")
     isRunning = false;
@@ -83,4 +92,3 @@ rl.on('line', (input) => {
 rl.on('close', () => {
   process.exit(0);
 });
-
