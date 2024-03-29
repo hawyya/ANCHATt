@@ -82,8 +82,8 @@ rl.on('line', (input) => {
             console.log(join)
         }
         else if(input.trim() === 'e'){
-            console.clear()
-            rl.close()
+            console.log(hello)
+            console.log(join)
         }
     })
   } else if(input.trim() === '3'){
@@ -96,10 +96,6 @@ rl.on('line', (input) => {
   if (!isRunning) {
     rl.close();
   }
-});
-
-rl.on('close', () => {
-  process.exit(0);
 });
 
 rl.on('close', () => {
