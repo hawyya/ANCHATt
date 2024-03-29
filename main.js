@@ -78,6 +78,7 @@ rl.on('line', (input) => {
         rl.setPrompt(quest3 + ':')
         rl.prompt()}
         else if(input.trim() === 'n'){
+            console.clear()
             console.log(hello)
             console.log(join)
         }
