@@ -71,11 +71,16 @@ rl.on('line', (input) => {
     rl.on('line', (input) =>{
         if(input.trim() === 'y'){
             console.clear()    
-            console.log("This is your disposable room code! Now you can share it to a friend")    
+            console.log("This is your disposable room code!Now you can share it to a friend")    
             num = getRandomInt(100000, 999999)
             console.log(num)
+            console.log("waiting for your friend to join...")
         rl.setPrompt(quest3 + ':')
         rl.prompt()}
+        else if(input.trim() === 'n'){
+            console.log(hello)
+            console.log(join)
+        }
         else if(input.trim() === 'e'){
             console.clear()
             rl.close()
@@ -91,6 +96,10 @@ rl.on('line', (input) => {
   if (!isRunning) {
     rl.close();
   }
+});
+
+rl.on('close', () => {
+  process.exit(0);
 });
 
 rl.on('close', () => {
