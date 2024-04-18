@@ -45,6 +45,7 @@ function getRandomInt(min,max){
 
 let isRunning = true;
 
+const { constrainedMemory } = require('process')
 const readline = require('readline');
 const internal = require('stream')
 
@@ -70,11 +71,9 @@ rl.on('line', (input) => {
     rl.prompt()
     rl.on('line', (input) => {
       if (input.trim() === "y") {
+        console.clear()
         rl.setPrompt(enter + ':')
         rl.prompt()
-        rl.on('line', (input) => {
-        })
-        console.log(quest3)
       }else if(input.trim()==="n"){
         console.clear()
         console.log(hello)
